@@ -103,3 +103,6 @@ function runc() {
 export runc
 
 #export LC_ALL=en_US.UTF-8
+
+# Ignore duplicates when scrolling up through command history
+HIST_FIND_NO_DUPS="true"
