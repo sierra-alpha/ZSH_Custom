@@ -8,17 +8,34 @@ function git_prompt_info() {
   fi
 }
 
+ZSH_THEME_GIT_PROMPT_PREFIX="git:("
+ZSH_THEME_GIT_PROMPT_SUFFIX=")%{$reset_color%} "
+
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
+
+ZSH_THEME_GIT_PROMPT_REMOTE_EXISTS_COLOUR="%{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_REMOTE_MISSING_COLOUR="%{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_DIVERGED_COLOUR="%{$fg[magenta]%}"
+ZSH_THEME_GIT_PROMPT_AHEAD_COLOUR="%{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_BEHIND_COLOUR="%{$fg[red]%}"
+
 #checks for color promts
 function git_color_prompt() {
-   if [[ "$(git_commits_ahead)" ]]; then
-      echo "$(git_commits_ahead)"
-   elif [[ "$(git_commits_behind)" ]]; then
-      echo "$(git_commits_behind)"
-   elif [[ "$(git_prompt_remote)" ]]; then
-      echo "$(git_prompt_remote)"
-   fi
+  local colour_prompt
+  colour_prompt=$ZSH_THEME_GIT_PROMPT_REMOTE_MISSING_COLOUR
+  if [[ "$(git_commits_ahead)" ]] && [[ "$(git_commits_behind)" ]]; then
+    colour_prompt=$ZSH_THEME_GIT_PROMPT_DIVERGED_COLOUR
+  elif [[ "$(git_commits_ahead)" ]]; then
+    colour_prompt=$ZSH_THEME_GIT_PROMPT_AHEAD_COLOUR
+  elif [[ "$(git_commits_behind)" ]]; then
+    colour_prompt=$ZSH_THEME_GIT_PROMPT_BEHIND_COLOUR
+  elif [[ -n "$(command git show-ref origin/$(git_current_branch) 2> /dev/null)" ]]; then
+    colour_prompt=$ZSH_THEME_GIT_PROMPT_REMOTE_EXISTS_COLOUR
+  fi
+  echo $colour_prompt
 }
-   
+
 #$(git_prompt_remote)$(git_commits_ahead)$(git_commits_behind)
 
 # Checks if working tree is dirty
