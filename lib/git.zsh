@@ -4,9 +4,22 @@ function git_prompt_info() {
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
-    echo "$(git_prompt_remote)$(git_commits_ahead)$(git_commits_behind)$ZSH_THEME_GIT_PROMPT_PREFIX$(parse_git_dirty)${ref#refs/heads/}$(git_prompt_remote)$(git_commits_ahead)$(git_commits_behind)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+    echo "$(git_color_prompt)$ZSH_THEME_GIT_PROMPT_PREFIX$(parse_git_dirty)${ref#refs/heads/}$(git_color_prompt)$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
+
+#checks for color promts
+function git_color_prompt() {
+   if [[ "$(git_commits_ahead)" ]]; then
+      echo "$(git_commits_ahead)"
+   elif [[ "$(git_commits_behind)" ]]; then
+      echo "$(git_commits_behind)"
+   elif [[ "$(git_prompt_remote)" ]]; then
+      echo "$(git_prompt_remote)"
+   fi
+}
+   
+#$(git_prompt_remote)$(git_commits_ahead)$(git_commits_behind)
 
 # Checks if working tree is dirty
 function parse_git_dirty() {
