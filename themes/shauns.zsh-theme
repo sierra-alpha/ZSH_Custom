@@ -10,7 +10,7 @@ PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
  ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
 
 
- ZSH_THEME_GIT_PROMPT_REMOTE_EXISTS="%{$fg[cyan]%}"
+ ZSH_THEME_GIT_PROMPT_REMOTE_EXISTS="%{$fg[green]%}"
  ZSH_THEME_GIT_PROMPT_REMOTE_MISSING="%{$fg[yellow]%}"
  ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[cyan]%}"
  ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[red]%}"
