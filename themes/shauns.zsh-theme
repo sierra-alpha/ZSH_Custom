@@ -11,11 +11,10 @@ PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
  ZSH_THEME_GIT_PROMPT_PREFIX="git:("
  ZSH_THEME_GIT_PROMPT_SUFFIX=")%{$reset_color%} "
 
- ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}"
+ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[orange]%}"
  ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
 
  ZSH_THEME_GIT_PROMPT_EQUAL_REMOTE="%{$fg[green]%}"
  ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE="%{$fg[cyan]%}"
  ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="%{$fg[red]%}"
-
-
+ ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="%{$fg[yellow]%}"
