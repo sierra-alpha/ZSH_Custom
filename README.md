@@ -14,7 +14,7 @@ you'll need to move your ~/.zshrc to ~/.oh-my-zsh/custom/ and then symlink it ba
   * [Git status prompt colours](##git%20status%20prompt%20colours)
     * [Colour Meaning](###colour%20meaning)
       * [BRANCH](####branch)
-      * [git:( + )](####'git:(%20+%20)')
+      * [git:( + )](####'git:\(%20+%20\)')
   * [Battery percent prompt colours](##battery%20percent%20prompt%20colours)
 
 ## Git status prompt colours
