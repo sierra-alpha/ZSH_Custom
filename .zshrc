@@ -96,12 +96,6 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-function runc() {
-	make $1 && ./$1 && rm "$1" || rm "$1"
-}
-
-export runc
-
 #export LC_ALL=en_US.UTF-8
 
 setopt HIST_FIND_NO_DUPS
