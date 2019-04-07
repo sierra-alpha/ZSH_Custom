@@ -4,7 +4,7 @@ function git_prompt_info() {
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
-    echo "$(git_color_prompt)$ZSH_THEME_GIT_PROMPT_PREFIX$(parse_git_dirty)${ref#refs/heads/}$(git_color_prompt)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+    echo "$(git_color_prompt)$ZSH_THEME_GIT_PROMPT_PREFIX$(parse_git_dirty)$(git_current_branch)$(git_color_prompt)$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
 
@@ -75,22 +75,6 @@ function git_remote_status() {
         echo $git_remote_status
     fi
 }
-
-# Outputs the name of the current branch
-# Usage example: git pull origin $(git_current_branch)
-# Using '--quiet' with 'symbolic-ref' will not cause a fatal error (128) if
-# it's not a symbolic ref, but in a Git repo.
-function git_current_branch() {
-  local ref
-  ref=$(command git symbolic-ref --quiet HEAD 2> /dev/null)
-  local ret=$?
-  if [[ $ret != 0 ]]; then
-    [[ $ret == 128 ]] && return  # no git repo.
-    ref=$(command git rev-parse --short HEAD 2> /dev/null) || return
-  fi
-  echo ${ref#refs/heads/}
-}
-
 
 # Gets the number of commits ahead from remote
 function git_commits_ahead() {
