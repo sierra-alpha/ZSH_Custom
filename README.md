@@ -78,7 +78,7 @@ Hope fully thats self explanatory, only works for macOS currently but easy to mo
 
 ## Runc
 
-`Runc` is a little script to make, run and then remove the executable file, it takes a c or cpp file as an argument and compiles it and runs it. Full credit to Ben Allen.
+`Runc` is a little script to make, run and then remove the executable file, it takes a c or cpp file as an argument and compiles it and runs it. Full credit to [Ben Allen](@bballenn).
 
 ## Github Create Repo
 
