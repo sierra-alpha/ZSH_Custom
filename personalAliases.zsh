@@ -1,0 +1,1 @@
+alias uni="cd ~/Google\ Drive/07\ UNI/"

@@ -6,6 +6,8 @@ if you load the files into your `.oh-my-zsh/custom` folder you'll have the same 
 
 you'll need to move your `~/.zshrc` to `~/.oh-my-zsh/custom/` and then symlink it back using `ln -s ~/.oh-my-zsh/custom/.zshrc .zshrc` if you want the custom options like removing duplicates in up arrow history. All file locations assume a default install of oh-my-zsh.
 
+'/personalAliases.zsh' is for my custom shortcuts on my machine, probably not relevant to your machine and directories, you can delete it, modify it or whatever. I could have .gitignere'd it but I wanted to have it as a record up here.
+
 
 ## Contents:
 
@@ -22,9 +24,9 @@ you'll need to move your `~/.zshrc` to `~/.oh-my-zsh/custom/` and then symlink i
 
 ## Git status prompt colours
 
-syntax = 'git:( BRANCH )'
+syntax = `git:( BRANCH )`
 
-'git:(' and ')' are the `ZSH_THEME_GIT_PROMPT_PREFIX` and the `ZSH_THEME_GIT_PROMPT_SUFFIX` respectively, referred to as 'git:( + )' from now on (as the prefix and suffix are always a matching colour)
+`git:(` and `)` are the `ZSH_THEME_GIT_PROMPT_PREFIX` and the `ZSH_THEME_GIT_PROMPT_SUFFIX` respectively, referred to as 'git:( + )' from now on (as the prefix and suffix are always a matching colour)
 
 BRANCH is the current branch checked out
 
