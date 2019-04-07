@@ -6,7 +6,7 @@ function github_initalise_local_and_create_and_link_to_new_repo() {
     echo "git init"
     git init
     echo "touch README.md"
-    touch readme.md
+    touch README.md
     echo "git add ."
     git add .
     echo "git commit -m \"Repo initialisation\""
