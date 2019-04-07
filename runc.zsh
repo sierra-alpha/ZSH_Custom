@@ -12,5 +12,3 @@
 function runc() {
 	make $1 && ./$1 && rm "$1" || rm "$1"
 }
-
-export runc
