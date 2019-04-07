@@ -1,7 +1,7 @@
 # uses github api to create a new repo using https
 # some files need to be comitted to the local for push command to succeed
 
-function ghrc() {
+function github_repo_create() {
     setopt verbose
     local user reponame private description curltext remotetext pushlinktext branch i
     if [[ ARGC -lt 2 ]]; then
