@@ -2,9 +2,9 @@
 
 Just my custom Zsh settings to get a nice looking terminal prompt.
 
-if you load the files into your '.oh-my-zsh/custom' folder you'll have the same beautiful prompt
+if you load the files into your `.oh-my-zsh/custom` folder you'll have the same beautiful prompt
 
-you'll need to move your ~/.zshrc to ~/.oh-my-zsh/custom/ and then symlink it back using `ln -s ~/.oh-my-zsh/custom/.zshrc .zshrc` if you want the custom options like removing duplicates in up arrow history
+you'll need to move your `~/.zshrc` to `~/.oh-my-zsh/custom/` and then symlink it back using `ln -s ~/.oh-my-zsh/custom/.zshrc .zshrc` if you want the custom options like removing duplicates in up arrow history. All file locations assume a default install of oh-my-zsh.
 
 
 ## Contents:
@@ -78,20 +78,20 @@ Hope fully thats self explanatory, only works for macOS currently but easy to mo
 
 ## Runc
 
-`Runc` is a little script to make, run and then remove the executable file, it takes a c or cpp file as an argument and compiles it and runs it. Full credit to [Ben Allen](@bballenn).
+`Runc` is a little script to make, run and then remove the executable file, it takes a c or cpp file as an argument and compiles it and runs it. Full credit to [Ben Allen](https://github.com/bballenn).
 
 ## Github Create Repo
 
 use `ghrc <username> <reponame> -p -d <description>`
 
-`-p                = use this option to set github repo as private`
-`-d (optional)     = a description and requires a description after it`
+``-p                = use this option to set github repo as private
+-d (optional)     = a description and requires a description after it``
 
 to create a repo online at github, it will prompt you to enter your password.
 
 username is the github username for the repository
 
-requires the alias.zsh file for this shor command.
+requires the alias.zsh file for this short command.
 
 ## Github Initialise local, create remote and link
 
