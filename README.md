@@ -16,6 +16,9 @@ you'll need to move your ~/.zshrc to ~/.oh-my-zsh/custom/ and then symlink it ba
       * [BRANCH](#branch)
       * [git:( + )](#git--)
   * [Battery percent prompt colours](#battery-percent-prompt-colours)
+  * [Runc](#runc)
+  * [Github Create Repo](#github-create-repo)
+  * [Github Initialise local, create remote and link](#github-initialise-local,-create-remote-and-link)
 
 ## Git status prompt colours
 
@@ -72,3 +75,24 @@ it shows the following pseudo steps:
 ![](documentation/batteryPromptColour.png)
 
 Hope fully thats self explanatory, only works for macOS currently but easy to modify the battery_prompt_colour.zsh as per the comments found in it. Feel free to open up a pull request if you implement it.
+
+## Runc
+
+`Runc` is a little script to make, run and then remove the executable file, it takes a c or cpp file as an argument and compiles it and runs it. Full credit to Ben Allen.
+
+## Github Create Repo
+
+use `ghrc <username> <reponame> -p -d <description>`
+
+`-p                = use this option to set github repo as private`
+`-d (optional)     = a description and requires a description after it`
+
+to create a repo online at github, it will prompt you to enter your password.
+
+username is the github username for the repository
+
+requires the alias.zsh file for this shor command.
+
+## Github Initialise local, create remote and link
+
+use `ginit` (same arguments as [Github Create Repo](#github-create-repo)) to run the initialise the directory with git, create a readme, stage the changes commit them, then uses [Github Create Repo](#github-create-repo) to create a remote repo and to set the origin to this remote and then link the local to the remote
