@@ -18,7 +18,7 @@ you'll need to move your ~/.zshrc to ~/.oh-my-zsh/custom/ and then symlink it ba
   * [Battery percent prompt colours](#battery-percent-prompt-colours)
   * [Runc](#runc)
   * [Github Create Repo](#github-create-repo)
-  * [Github Initialise local, create remote and link](#github-initialise-local,-create-remote-and-link)
+  * [Github Initialise local, create remote and link](#github-initialise-local-create-remote-and-link)
 
 ## Git status prompt colours
 
