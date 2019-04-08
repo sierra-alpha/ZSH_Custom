@@ -3,7 +3,7 @@
 # A function to put out certain colours depending on battery percentage
 function battery_prompt_colour() {
     local percent colour
-    percent=$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)
+    percent=$(echo powershell.exe WMIC PATH Win32_Battery Get EstimatedChargeRemaining | grep -o '[0-9]*')
     if [[ percent -gt "90" ]]; then
         colour=$ZSH_THEME_BATTERY_COLOUR_90_to_100
     elif [[ percent -gt "70" ]]; then
