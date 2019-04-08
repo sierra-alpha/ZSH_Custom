@@ -3,10 +3,17 @@
 
 function github_initalise_local_and_create_and_link_to_new_repo() {
     setopt verbose
+    local read_file="README.md"
     echo "git init"
     git init
-    echo "touch README.md"
-    touch README.md
+    if [ -s "$read_file" ]
+        then
+        echo "Touching $read_file"
+        touch "$read_file"
+        else
+        echo "creating $read_file"
+        echo "This is the initial $read_file" > "$read_file"
+    fi
     echo "git add ."
     git add .
     echo "git commit -m \"Repo initialisation\""
