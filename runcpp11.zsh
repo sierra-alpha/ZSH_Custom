@@ -10,5 +10,5 @@
 #
 
 function runcpp11() {
-	g++ -std=c++11 $1.cpp -o $1 && ./$1 && rm "$1" || rm "$1"
+	g++ -std=c++11 -Wall $1.cpp -o $1 && ./$1 && rm "$1" || rm "$1"
 }
