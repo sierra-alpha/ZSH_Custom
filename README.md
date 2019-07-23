@@ -6,7 +6,9 @@
 
 Just my custom Zsh settings to get a nice looking terminal prompt.
 
-if you load the files into your `.oh-my-zsh/custom` folder you'll have the same beautiful prompt
+you can get zsh from [here]( https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH )
+
+then if you load the files from this repository into your `.oh-my-zsh/custom` folder you'll have the same beautiful prompt (see below for photos)
 
 you'll need to move your `~/.zshrc` to `~/.oh-my-zsh/custom/` and then symlink it back using `ln -s ~/.oh-my-zsh/custom/.zshrc .zshrc` if you want the custom options like removing duplicates in up arrow history. All file locations assume a default install of oh-my-zsh.
 
