@@ -92,8 +92,8 @@ Hopefully thats self explanatory, only works for macOS currently but easy to mod
 
 use `ghrc <username> <reponame> -p -d <description>`
 
-`-p`             = use this option to set github repo as private  
-`-d` (optional)  = a description and requires a description after it  
+`-p` = use this option to set github repo as private  
+`-d` (optional) = a description and requires a description after it  
 
 to create a repo online at github, it will prompt you to enter your password.
 
