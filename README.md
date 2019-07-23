@@ -82,18 +82,18 @@ it shows the following pseudo steps:
 
 ![](documentation/batteryPromptColour.png)
 
-Hope fully thats self explanatory, only works for macOS currently but easy to modify the battery_prompt_colour.zsh as per the comments found in it. Feel free to open up a pull request if you implement it.
+Hopefully thats self explanatory, only works for macOS currently but easy to modify the battery_prompt_colour.zsh as per the comments found in it. Feel free to open up a pull request if you implement it.
 
 ## Runc
 
-`Runc` is a little script to make, run and then remove the executable file, it takes a c or cpp file as an argument and compiles it and runs it. Full credit to [Ben Allen](https://github.com/bballenn).
+`Runc` is a little script to make, run and then remove the executable file, it takes a c or cpp filename without the extension (very important or it will delete your source code after running it) as an argument and compiles it and runs it. Full credit to [Ben Allen](https://github.com/bballenn).
 
 ## Github Create Repo
 
 use `ghrc <username> <reponame> -p -d <description>`
 
-``-p                = use this option to set github repo as private
--d (optional)     = a description and requires a description after it``
+`-p`             = use this option to set github repo as private  
+`-d` (optional)  = a description and requires a description after it  
 
 to create a repo online at github, it will prompt you to enter your password.
 
