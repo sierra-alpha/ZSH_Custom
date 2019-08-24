@@ -1,15 +1,13 @@
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/Sierra-Alpha/ZSH_Custom/edit/windowsNoBattery/ZSH_CustomInstallWinNoBatt.sh)"
-echo Please enter your user name
-read username
-echo Please enter your password
-read password
+#echo Please enter your user name
+#read username
+#echo Please enter your password
+#read password
 sudo apt-get update -y
-echo $password
+#echo $password
 sudo apt-get install zsh -y
 chsh -s $(which zsh)
-echo $password
-exec zsh
-echo 2
+#echo $password
 sudo apt-get install curl -y
 sudo apt-get install git -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
