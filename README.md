@@ -1,3 +1,5 @@
+### I Use Fish now so I'll probably port across any of this that I care about to there.
+
 # To do:
 
  - [ ]  Add runcpp11 to this readme
